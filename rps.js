@@ -1,15 +1,15 @@
-//create function to computerPlay to randomly return 'Rock', 'Paper', or 'Scissors'.
-
-const moves = ['rock', 'paper', 'scissors']
-let selectMove;
-let playerMove;
+//create function computerPlay to randomly return 'rock', 'paper', or 'scissors'.
+//create function playerPlay to allow player to select 'rock', 'paper', or 'scissors'.
 
 function computerPlay() {
+    const moves = ['rock', 'paper', 'scissors']
     const randomMove = moves[Math.floor(Math.random()*moves.length)];
     return randomMove;
 }
 
 function playerPlay() {
+    let selectMove;
+    let playerMove;
     selectMove = prompt('Rock, paper, or scissors?', '');
     return playerMove = selectMove.toLowerCase();
 
@@ -48,19 +48,19 @@ function game() {
 
     for (let i= 0; i < 5; i++) {
       switch(playRound()) {
-          case 'You win!':
-              playerScore += 1;
-              console.log('You win!');
-              break;
-            case 'You lose!':
+        case 'You win!':
+                playerScore += 1;
+                console.log('You win!');
+                break;
+        case 'You lose!':
                 computerScore += 1;
                 console.log('You lost!');
                 break;
-                case 'Its a tie!':
-                    computerScore += 1;
-                    playerScore += 1;
-                    console.log('Its a tie!');
-                    break;
+        case 'Its a tie!':
+                computerScore += 1;
+                playerScore += 1;
+                console.log('Its a tie!');
+                break;
     }
 }
     if (playerScore > computerScore) {
